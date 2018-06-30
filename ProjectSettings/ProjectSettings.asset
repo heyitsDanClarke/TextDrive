@@ -646,8 +646,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 5d75f8a6-4a2b-492f-827a-6995ffecebe1
-  projectName: TextDrive (2)
+  cloudProjectId: ff6170d1-0269-4577-9979-106a1010d30f
+  projectName: TextDrive
   organizationId: bear-cloud-games
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
