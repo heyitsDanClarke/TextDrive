@@ -2034,6 +2034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  hazards: []
 --- !u!4 &2104584915
 Transform:
   m_ObjectHideFlags: 0
