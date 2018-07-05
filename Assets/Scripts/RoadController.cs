@@ -5,9 +5,15 @@ using UnityEngine;
 public class RoadController : MonoBehaviour {
 
     public float speed = 100;
+    public float hazardSpeed = 20;
+    public float otherCarSpeed = 10;
     public GameObject segment;
+    public GameObject[] cars;
+    public GameObject[] hazards;
+    public GameObject[] environmentPieces;
     public Material alternate;
     public int numSegments = 16;
+
     float segmentLength;
     float trackLength;
 
@@ -36,4 +42,6 @@ public class RoadController : MonoBehaviour {
             }
         }
     }
+
+    void PlaceHazards
 }
