@@ -17,13 +17,21 @@ public class RoadController : MonoBehaviour {
     float segmentLength;
     float trackLength;
 
+    Transform roadPool;
+    Transform hazardPool;
+    Transform carPool;
+
     private void Start()
     {
+        hazardPool = transform.GetChild(0);
+        carPool = transform.GetChild(1);
+        roadPool = transform.GetChild(2);
+
         segmentLength = segment.GetComponent<Renderer>().bounds.size.z;
         trackLength = segmentLength * numSegments;
         for (int i = 0; i < numSegments; i++)
         {
-            Transform tempSegment = Instantiate(segment, transform).transform;
+            Transform tempSegment = Instantiate(segment, roadPool).transform;
             tempSegment.position = new Vector3(0, 0, i * segmentLength);
             if (i % 2 == 0)
                 tempSegment.GetComponent<Renderer>().material = alternate;
@@ -31,9 +39,17 @@ public class RoadController : MonoBehaviour {
         
     }
 
+    float counter = 0;
     private void Update()
     {
-        foreach(Transform child in transform)
+        counter += Time.deltaTime;
+        if(counter >= 5)
+        {
+            counter = 0;
+            PlaceHazard();
+        }
+
+        foreach(Transform child in roadPool)
         {
             child.localPosition = new Vector3(0, 0, child.localPosition.z - Time.deltaTime * speed);
             if (child.localPosition.z <= 0)
@@ -41,7 +57,25 @@ public class RoadController : MonoBehaviour {
                 child.localPosition = new Vector3(0, 0, child.localPosition.z + trackLength);
             }
         }
+        foreach(Transform child in hazardPool)
+        {
+            child.localPosition = new Vector3(0, 0, child.localPosition.z - Time.deltaTime * hazardSpeed);
+            if (child.localPosition.z <= 0)
+            {
+                RecycleObject(child.gameObject, hazardPool);
+            }
+        }
     }
 
-    void PlaceHazards
+    void PlaceHazard()
+    {
+        Transform tempHazard = Instantiate(hazards[Random.Range(0, hazards.Length)], hazardPool).transform;
+        tempHazard.position = new Vector3(0, 0, trackLength);
+        tempHazard.rotation = Camera.main.transform.rotation;
+    }
+
+    void RecycleObject(GameObject toRecycle, Transform pool)
+    {
+        toRecycle.SetActive(false);
+    }
 }
