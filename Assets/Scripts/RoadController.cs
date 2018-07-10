@@ -30,9 +30,6 @@ public class RoadController : MonoBehaviour {
 
     private void Start()
     {
-        scoreDisplay = GameObject.Find("Score").GetComponent<Text>();
-        highScoreDisplay = GameObject.Find("High Score").GetComponent<Text>();
-
         hazardPool = transform.GetChild(0);
         carPool = transform.GetChild(1);
         roadPool = transform.GetChild(2);
@@ -52,14 +49,6 @@ public class RoadController : MonoBehaviour {
     float counter = 0;
     private void Update()
     {
-        score += multiplier;
-        scoreDisplay.text = System.String.Format("{0:n}",Mathf.RoundToInt(score));
-        if(score > highScore)
-        {
-            highScore = score;
-            highScoreDisplay.text = System.String.Format("{0:n}",Mathf.RoundToInt(highScore));
-        }
-
         counter += Time.deltaTime;
         if (counter >= 5)
         {
