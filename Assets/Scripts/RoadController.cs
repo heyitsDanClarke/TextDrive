@@ -12,7 +12,7 @@ public class RoadController : MonoBehaviour {
     public GameObject[] cars;
     public GameObject[] hazards;
     public GameObject[] environmentPieces;
-    public Material alternate;
+    public Color alternate;
     public int numSegments = 16;
 
     float segmentLength;
@@ -41,7 +41,7 @@ public class RoadController : MonoBehaviour {
             Transform tempSegment = Instantiate(segment, roadPool).transform;
             tempSegment.position = new Vector3(0, 0, i * segmentLength);
             if (i % 2 == 0)
-                tempSegment.GetComponent<Renderer>().material = alternate;
+                tempSegment.GetComponent<SpriteRenderer>().color = alternate;
         }
         
     }
