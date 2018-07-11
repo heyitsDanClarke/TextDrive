@@ -6,13 +6,14 @@ public class PlayerController : MonoBehaviour {
 
 	void Update () {
         if (Input.GetKeyDown("left"))
-            transform.position = transform.position.x <= -1.5 ? transform.position : new Vector3(transform.position.x - 1.5f, transform.position.y,transform.position.z);
+            transform.position = transform.position.x <= -5.5 ? transform.position : new Vector3(transform.position.x - 5.5f, transform.position.y,transform.position.z);
         if(Input.GetKeyDown("right"))
-            transform.position = transform.position.x >= 1.5 ? transform.position : new Vector3(transform.position.x + 1.5f, transform.position.y, transform.position.z);
+            transform.position = transform.position.x >= 5.5 ? transform.position : new Vector3(transform.position.x + 5.5f, transform.position.y, transform.position.z);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("hey");
         if (collision.gameObject.tag == "Hazard")
             Destroy(gameObject);
     }
