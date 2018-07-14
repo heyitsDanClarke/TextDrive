@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4458750782593694}
   - component: {fileID: 212953948710745622}
-  - component: {fileID: 65609901137225818}
   - component: {fileID: 54320323520915640}
+  - component: {fileID: 65199833174328778}
   m_Layer: 0
-  m_Name: Hazard
+  m_Name: Goat
   m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1830072334416136}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.650043, y: 37.07348, z: 36.422337}
-  m_LocalScale: {x: 2, y: 5, z: 1}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!54 &54320323520915640
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -57,7 +57,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65609901137225818
+--- !u!65 &65199833174328778
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -67,7 +67,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.50999993, y: 0.49999997, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212953948710745622
 SpriteRenderer:
@@ -104,8 +104,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d1fafdea5ee10bb49821d7c82c559d96, type: 3}
-  m_Color: {r: 0.8661604, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300030, guid: fc6d8fd25b41a1a4088982d08f6f56d5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
