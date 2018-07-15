@@ -38,8 +38,8 @@ public class RoadController : MonoBehaviour {
         trackLength = segmentLength * numSegments;
         for (int i = 0; i < numSegments; i++)
         {
-            Transform tempSegment = (i %2 == 0 ? Instantiate(segment, roadPool).transform : Instantiate(alternate, roadPool).transform);
-            
+            //Transform tempSegment = (i %2 == 0 ? Instantiate(segment, roadPool).transform : Instantiate(alternate, roadPool).transform);
+            Transform tempSegment = Instantiate(segment, roadPool).transform;
             tempSegment.position = new Vector3(0, 0, i * segmentLength);
             
                 

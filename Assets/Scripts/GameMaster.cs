@@ -12,6 +12,7 @@ public class GameMaster : MonoBehaviour {
     float highScore;
     Text scoreDisplay;
     Text highScoreDisplay;
+    Text multiplierDisplay;
 
     private void Awake()
     {
@@ -25,10 +26,12 @@ public class GameMaster : MonoBehaviour {
     {
         scoreDisplay = GameObject.Find("Score").GetComponent<Text>();
         highScoreDisplay = GameObject.Find("High Score").GetComponent<Text>();
+        multiplierDisplay = GameObject.Find("Multiplier").GetComponent<Text>();
     }
 
     private void Update()
     {
+        multiplierDisplay.text = "x" + multiplier;
         score += multiplier;
         scoreDisplay.text = System.String.Format("{0:#,#}", Mathf.RoundToInt(score));
         if (score > highScore)
