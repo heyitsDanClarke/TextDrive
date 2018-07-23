@@ -999,9 +999,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41039dc96161d5e49a0512199e087c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receivedMessage: {fileID: 1234093396643026, guid: db129d870771e09439656bda76c1d85f,
+  receivedMessage: {fileID: 1692629006191044, guid: f47f82265ecb65841b7fa0e2e130028e,
     type: 2}
-  sentMessage: {fileID: 1483689183789958, guid: 577432e434be3f242bbadabfa4694a67,
+  sentMessage: {fileID: 1244147481691052, guid: fca03f8d0f0d975499bf7116d0a6ce43,
     type: 2}
 --- !u!1 &857099681
 GameObject:
@@ -1263,10 +1263,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 10
-    m_Right: 0
+    m_Right: 10
     m_Top: 0
     m_Bottom: 10
-  m_ChildAlignment: 6
+  m_ChildAlignment: 7
   m_Spacing: 10
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
